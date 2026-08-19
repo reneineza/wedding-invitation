@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gad & Delphine - Wedding Invitation</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Hero Section -->
+    <header class="hero" id="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content animate-on-scroll">
+            <p class="subtitle fade-up" style="animation-delay: 0.2s">A date with Destiny</p>
+            <h1 class="title fade-up" style="animation-delay: 0.4s">Two hearts. One beautiful Day</h1>
+            <h2 class="names gold-text fade-up" style="animation-delay: 0.6s">GAD &amp; DELPHINE</h2>
+            <div class="divider fade-up" style="animation-delay: 0.8s"></div>
+            <p class="date fade-up" style="animation-delay: 1.0s">October 3, 2026</p>
+            
+            <div class="fade-up" style="animation-delay: 1.2s; margin-top: 30px;">
+                <button id="add-to-calendar" class="btn-primary">Add to Calendar</button>
+            </div>
+
+            <div class="scroll-indicator fade-up" style="animation-delay: 1.5s">
+                <span>Scroll</span>
+                <div class="arrow">↓</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Invitation Section -->
+    <section class="invitation section" id="invitation">
+        <div class="container animate-on-scroll">
+            <div class="glass-card">
+                <h2 class="section-title gold-text text-center">The Invitation</h2>
+                
+                <div class="quote-box">
+                    <p class="quote-reference">Genesis 2:18</p>
+                    <p class="quote">"Then the Lord God said, 'It is not good for the man to be alone. I will make a helper who is just right for him.'"</p>
+                </div>
+                
+                <div class="invitation-body text-center">
+                    <p class="invitation-text">
+                        The family of <span class="highlight">SEBAGANDE Innocent</span><br>
+                        and <span class="highlight">Pastor MUTABAZI Victor</span>
+                    </p>
+                    <p class="invitation-subtext">are pleased to invite you to the wedding of their children:</p>
+                    
+                    <h3 class="couple-names gold-text">IZABAYO Delphine <span class="ampersand">&amp;</span> ABIJURU Gad</h3>
+                    
+                    <div class="date-block">
+                        <p class="save-date">It will be held on</p>
+                        <p class="highlight-date">03 . 10 . 2026</p>
+                    </div>
+                </div>
+                
+                <!-- Countdown Timer -->
+                <div class="countdown-container">
+                    <div class="countdown-item">
+                        <span id="days" class="gold-text">00</span>
+                        <p>Days</p>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="hours" class="gold-text">00</span>
+                        <p>Hours</p>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="mins" class="gold-text">00</span>
+                        <p>Mins</p>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="secs" class="gold-text">00</span>
+                        <p>Secs</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery Section -->
+    <section class="gallery section" id="gallery">
+        <div class="container animate-on-scroll">
+            <h2 class="section-title text-center gold-text">Our Story</h2>
+            <p class="text-center section-subtitle">Moments leading up to our beautiful day.</p>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="./gallery1.png" alt="Engagement Photo 1"></div>
+                <div class="gallery-item tall"><img src="./gallery2.png" alt="Engagement Photo 2"></div>
+                <div class="gallery-item"><img src="./gallery3.png" alt="Engagement Photo 3"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="timeline section" id="timeline">
+        <div class="container animate-on-scroll">
+            <h2 class="section-title text-center gold-text">The Big Day</h2>
+            <p class="text-center section-subtitle">Join us as we celebrate our love and commitment.</p>
+            
+            <div class="timeline-container">
+                <div class="timeline-item">
+                    <div class="time gold-text">9:00 AM</div>
+                    <div class="event-details glass-panel hover-lift">
+                        <h4>Introduction & Dowry giving</h4>
+                        <p><i data-lucide="map-pin" class="icon-pin"></i> Kaleb Garden-Rebero</p>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Kaleb+Garden+Rebero" target="_blank" class="directions-link">Get Directions →</a>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="time gold-text">2:00 PM</div>
+                    <div class="event-details glass-panel hover-lift">
+                        <h4>Religion ceremony</h4>
+                        <p><i data-lucide="map-pin" class="icon-pin"></i> Paroisse Eglise Vivante De Jesus Christ-Rebero</p>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Paroisse+Eglise+Vivante+De+Jesus+Christ+Rebero" target="_blank" class="directions-link">Get Directions →</a>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="time gold-text">4:00 PM</div>
+                    <div class="event-details glass-panel hover-lift">
+                        <h4>Reception</h4>
+                        <p><i data-lucide="map-pin" class="icon-pin"></i> Kaleb Garden Rebero</p>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Kaleb+Garden+Rebero" target="_blank" class="directions-link">Get Directions →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <p class="appreciation text-center animate-on-scroll">Your presence will be highly appreciated !!</p>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section section" id="map">
+        <div class="container animate-on-scroll">
+            <h2 class="section-title text-center gold-text">Location</h2>
+            <div class="map-container glass-panel">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15949.711202868913!2d30.063162799999995!3d-1.9830588!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dca68516dcd5ab%3A0xc07a8bdfd708fc7a!2sKaleb%20Garden!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s" 
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guestbook Section -->
+    <section class="guestbook section" id="guestbook">
+        <div class="container animate-on-scroll">
+            <h2 class="section-title text-center gold-text">Guestbook</h2>
+            <p class="text-center section-subtitle">Leave a message or well wishes for the couple!</p>
+            
+            <div class="guestbook-container">
+                <div class="guestbook-form-box glass-panel">
+                    <form id="guestbook-form">
+                        <div class="form-group">
+                            <label for="gb-name">Your Name</label>
+                            <input type="text" id="gb-name" required placeholder="e.g., Jane Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="gb-message">Your Message</label>
+                            <textarea id="gb-message" rows="4" required placeholder="Wishing you a lifetime of happiness..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary w-100">Post Message</button>
+                    </form>
+                </div>
+                
+                <div class="guestbook-messages" id="guestbook-messages">
+                    <!-- Messages will be loaded here via JS -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section" id="contact">
+        <div class="container text-center animate-on-scroll">
+            <h2 class="section-title gold-text">Contact Information</h2>
+            <p class="section-subtitle">For any inquiries, please reach out to us.</p>
+            
+            <div class="contact-grid">
+                <div class="contact-card glass-panel hover-lift">
+                    <h4 class="gold-text">A. Gad</h4>
+                    <ul class="contact-list">
+                        <li>+250 785 124 530</li>
+                        <li>+250 783 844 966</li>
+                        <li>+250 798 117 269</li>
+                    </ul>
+                </div>
+                
+                <div class="contact-card glass-panel hover-lift">
+                    <h4 class="gold-text">I. Delphine</h4>
+                    <ul class="contact-list">
+                        <li>+250 784 684 488</li>
+                        <li>+250 788 757 200</li>
+                        <li>+250 788 490 438</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-overlay"></div>
+        <div class="container text-center footer-content">
+            <p class="footer-text">We can't wait to celebrate with you!</p>
+            <p class="signature gold-text">G &amp; D</p>
+        </div>
+    </footer>
+
+    <!-- Music Player -->
+    <div class="music-player">
+        <button id="music-toggle" class="music-btn glass-panel" aria-label="Play/Pause Music">
+            <i data-lucide="music" class="music-icon"></i>
+        </button>
+    </div>
+    <audio id="bg-music" loop>
+        <source src="https://cdn.pixabay.com/audio/2022/01/26/audio_d0c6ff1cb8.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Contact Action Modal -->
+    <div id="contact-modal" class="modal-overlay hidden">
+        <div class="modal-content glass-panel">
+            <h3 class="gold-text">Contact Action</h3>
+            <p id="modal-number-display" class="modal-number">+250 XXX XXX XXX</p>
+            <p class="modal-prompt">What would you like to do?</p>
+            <div class="modal-actions">
+                <a id="btn-call" href="#" class="btn-primary"><i data-lucide="phone" class="icon"></i> Call</a>
+                <a id="btn-give" href="#" class="btn-primary"><i data-lucide="banknote" class="icon"></i> Give (MoMo)</a>
+                <button id="btn-cancel" class="btn-secondary">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="./main.js"></script>
+</body>
+</html>
