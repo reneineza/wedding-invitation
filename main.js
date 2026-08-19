@@ -1,6 +1,55 @@
 // main.js
 
+// UI Enhancements: Loader & Toast
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        const loader = document.getElementById('loader');
+        if (loader) loader.classList.add('fade-out');
+    }, 800);
+});
+
+function showToast(message) {
+    const container = document.getElementById('toast-container');
+    if (!container) return;
+    
+    const toast = document.createElement('div');
+    toast.className = 'toast';
+    toast.innerHTML = `<i data-lucide="check-circle" style="color: var(--secondary-color)"></i> <span>${message}</span>`;
+    container.appendChild(toast);
+    
+    if (window.lucide) {
+        lucide.createIcons();
+    }
+    
+    setTimeout(() => {
+        toast.classList.add('hide');
+        setTimeout(() => toast.remove(), 400);
+    }, 3500);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+    // 0. Scroll Progress & Navbar
+    const scrollProgress = document.getElementById('scroll-progress');
+    const navbar = document.getElementById('navbar');
+    
+    window.addEventListener('scroll', () => {
+        // Progress Bar
+        if (scrollProgress) {
+            const scrollTotal = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollRatio = (window.scrollY / scrollTotal) * 100;
+            scrollProgress.style.width = scrollRatio + '%';
+        }
+        
+        // Navbar
+        if (navbar) {
+            if (window.scrollY > 400) {
+                navbar.classList.add('nav-visible');
+            } else {
+                navbar.classList.remove('nav-visible');
+            }
+        }
+    });
+
     // 1. Intersection Observer for Scroll Animations
     const observerOptions = {
         root: null,
@@ -127,36 +176,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 guestbookForm.reset();
                 loadMessages();
                 
-                // Show a brief success alert (optional)
-                alert("Thank you for your well wishes!");
+                // Show a brief success toast instead of alert
+                showToast("Thank you for your well wishes!");
             }
         });
     }
 
-    // 5. Music Player Logic
-    const musicBtn = document.getElementById('music-toggle');
-    const bgMusic = document.getElementById('bg-music');
-    const musicIcon = document.querySelector('.music-icon');
-    let isPlaying = false;
 
-    if (musicBtn && bgMusic) {
-        musicBtn.addEventListener('click', () => {
-            if (isPlaying) {
-                bgMusic.pause();
-                musicIcon.classList.remove('playing');
-                isPlaying = false;
-            } else {
-                // Play music and catch any potential errors (like missing file)
-                bgMusic.play().then(() => {
-                    musicIcon.classList.add('playing');
-                    isPlaying = true;
-                }).catch(err => {
-                    console.log("Audio play failed:", err);
-                    alert("Music could not be loaded. Please ensure you are connected to the internet!");
-                });
-            }
-        });
-    }
 
     // 6. Contact Action Modal
     const contactItems = document.querySelectorAll('.contact-list li');

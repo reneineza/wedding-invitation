@@ -7,18 +7,44 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Lato:ital,wght@0,300;0,400;0,700;1,300&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div id="loader" class="loader-container">
+        <div class="loader-content">
+            <div class="couple-names script-text gold-text">Gad <span class="ampersand">&amp;</span> Delphine</div>
+            <div class="loader-ring"></div>
+        </div>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress-container">
+        <div class="scroll-progress-bar" id="scroll-progress"></div>
+    </div>
+
+    <!-- Floating Navigation Bar -->
+    <nav id="navbar" class="glass-nav hidden">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo gold-text">G&D</a>
+            <ul class="nav-links">
+                <li><a href="#gallery">Memories</a></li>
+                <li><a href="#story">Our Story</a></li>
+                <li><a href="#timeline">The Big Day</a></li>
+                <li><a href="#guestbook">Guestbook</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <!-- Hero Section -->
     <header class="hero" id="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content animate-on-scroll">
             <p class="subtitle fade-up" style="animation-delay: 0.2s">A date with Destiny</p>
             <h1 class="title fade-up" style="animation-delay: 0.4s">Two hearts. One beautiful Day</h1>
-            <h2 class="names gold-text fade-up" style="animation-delay: 0.6s">GAD &amp; DELPHINE</h2>
+            <h2 class="names script-text gold-text fade-up" style="animation-delay: 0.6s">Gad &amp; Delphine</h2>
             <div class="divider fade-up" style="animation-delay: 0.8s"></div>
             <p class="date fade-up" style="animation-delay: 1.0s">October 3, 2026</p>
             
@@ -51,7 +77,7 @@
                     </p>
                     <p class="invitation-subtext">are pleased to invite you to the wedding of their children:</p>
                     
-                    <h3 class="couple-names gold-text">IZABAYO Delphine <span class="ampersand">&amp;</span> ABIJURU Gad</h3>
+                    <h3 class="couple-names script-text gold-text" style="font-size: 4rem;">Izabayo Delphine <span class="ampersand" style="font-size: 3rem;">&amp;</span> Abijuru Gad</h3>
                     
                     <div class="date-block">
                         <p class="save-date">It will be held on</p>
@@ -85,13 +111,19 @@
     <!-- Photo Gallery Section -->
     <section class="gallery section" id="gallery">
         <div class="container animate-on-scroll">
-            <h2 class="section-title text-center gold-text">Our Story</h2>
+            <h2 class="section-title text-center gold-text">Memories</h2>
             <p class="text-center section-subtitle">Moments leading up to our beautiful day.</p>
             
             <div class="gallery-grid">
-                <div class="gallery-item"><img src="./gallery1.png" alt="Engagement Photo 1"></div>
-                <div class="gallery-item tall"><img src="./gallery2.png" alt="Engagement Photo 2"></div>
-                <div class="gallery-item"><img src="./gallery3.png" alt="Engagement Photo 3"></div>
+                <div class="gallery-item"><img src="./gallery1.jpg" alt="Engagement Photo 1"></div>
+                <div class="gallery-item tall"><img src="./gallery2.jpg" alt="Engagement Photo 2"></div>
+                <div class="gallery-item"><img src="./gallery3.jpg" alt="Engagement Photo 3"></div>
+                <div class="gallery-item"><img src="./gallery4.jpg" alt="Engagement Photo 4"></div>
+                <div class="gallery-item tall"><img src="./gallery5.jpg" alt="Engagement Photo 5"></div>
+                <div class="gallery-item"><img src="./gallery6.jpg" alt="Engagement Photo 6"></div>
+                <div class="gallery-item tall"><img src="./gallery7.jpg" alt="Engagement Photo 7"></div>
+                <div class="gallery-item"><img src="./gallery8.jpg" alt="Engagement Photo 8"></div>
+                <div class="gallery-item"><img src="./gallery9.jpg" alt="Engagement Photo 9"></div>
             </div>
         </div>
     </section>
@@ -135,15 +167,28 @@
         </div>
     </section>
 
-    <!-- Map Section -->
-    <section class="map-section section" id="map">
+
+    <!-- Our Story Section -->
+    <section class="story section" id="story">
         <div class="container animate-on-scroll">
-            <h2 class="section-title text-center gold-text">Location</h2>
-            <div class="map-container glass-panel">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15949.711202868913!2d30.063162799999995!3d-1.9830588!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dca68516dcd5ab%3A0xc07a8bdfd708fc7a!2sKaleb%20Garden!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s" 
-                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
+            <h2 class="section-title text-center gold-text">Our Story</h2>
+            <p class="text-center section-subtitle">A brief timeline of our journey together.</p>
+            
+            <div class="story-split">
+                <div class="story-image-container fade-up">
+                    <img src="./our_story.jpg" alt="Gad and Delphine" class="story-image">
+                    <div class="story-image-frame"></div>
+                </div>
+                <div class="story-text-container glass-panel fade-up" style="animation-delay: 0.3s">
+                    <h3 class="script-text gold-text story-chapter">How it all began...</h3>
+                    <p><span class="drop-cap gold-text">W</span>e first crossed paths at a mutual friend's gathering in March 2022. What started as a simple conversation quickly turned into hours of talking and laughing. We both knew right then that there was a special connection.</p>
+                    
+                    <h3 class="script-text gold-text story-chapter mt-4">The First Date</h3>
+                    <p>The following month, Gad planned a beautiful evening at Delphine's favorite restaurant. The night was filled with wonderful food, deeper conversations, and the realization that this was the beginning of a beautiful journey together.</p>
+                    
+                    <h3 class="script-text gold-text story-chapter mt-4">The Proposal</h3>
+                    <p>Fast forward to December 2025. Under a sky full of stars, surrounded by our closest friends and family, Gad got down on one knee and asked the most important question. It was the easiest 'Yes' ever!</p>
+                </div>
             </div>
         </div>
     </section>
@@ -212,15 +257,7 @@
         </div>
     </footer>
 
-    <!-- Music Player -->
-    <div class="music-player">
-        <button id="music-toggle" class="music-btn glass-panel" aria-label="Play/Pause Music">
-            <i data-lucide="music" class="music-icon"></i>
-        </button>
-    </div>
-    <audio id="bg-music" loop>
-        <source src="https://cdn.pixabay.com/audio/2022/01/26/audio_d0c6ff1cb8.mp3" type="audio/mpeg">
-    </audio>
+
 
     <!-- Contact Action Modal -->
     <div id="contact-modal" class="modal-overlay hidden">
@@ -235,6 +272,9 @@
             </div>
         </div>
     </div>
+
+    <!-- Toast Notification Container -->
+    <div id="toast-container" class="toast-container"></div>
 
     <script type="module" src="./main.js"></script>
 </body>
