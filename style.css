@@ -242,23 +242,37 @@ h1, h2, h3, h4, h5, h6, .subtitle, .quote-reference, .signature { font-family: v
 
 /* Responsive */
 @media (max-width: 768px) {
+    .container { padding: 0 15px; }
     .hero { background-attachment: scroll; background-position: center center; }
-    .hero .names { font-size: 3.5rem; letter-spacing: normal; }
-    .hero .title { font-size: 1.5rem; }
-    .section-title { font-size: 2.2rem; }
-    .glass-card { padding: 40px 20px; }
-    .couple-names { font-size: 2.8rem; }
-    .couple-names .ampersand { font-size: 2rem; }
-    .highlight-date { font-size: 2rem; }
-    .countdown-container { gap: 15px; flex-wrap: wrap; }
-    .countdown-item span { font-size: 2rem; }
+    .hero .names { font-size: 3.5rem; letter-spacing: normal; line-height: 1.1; margin-bottom: 15px; }
+    .hero .title { font-size: 1.3rem; }
+    .hero .subtitle { font-size: 1.2rem; }
+    .section-title { font-size: 2rem; margin-bottom: 15px; }
+    .section-subtitle { font-size: 1rem; padding: 0 10px; }
+    .glass-card { padding: 30px 15px; margin: 0 10px; }
+    .couple-names { font-size: 2.5rem; }
+    .couple-names .ampersand { font-size: 1.8rem; }
+    .highlight-date { font-size: 1.8rem; }
+    .countdown-container { gap: 10px; flex-wrap: wrap; }
+    .countdown-item { padding: 15px; min-width: 80px; }
+    .countdown-item span { font-size: 1.6rem; }
+    .story-split { flex-direction: column; gap: 30px; margin-top: 30px; }
+    .story-image-frame { transform: translate(15px, 15px); width: calc(100% - 15px); height: calc(100% - 15px); }
+    .story-text-container { padding: 30px 20px !important; }
     .guestbook-container { grid-template-columns: 1fr; }
+    .form-group input, .form-group textarea { width: 100%; padding: 15px; font-size: 16px; } /* 16px prevents iOS zoom on focus */
+    .btn, .submit-btn { width: 100%; padding: 16px; }
     .timeline-container::before { left: 20px; }
     .timeline-item { justify-content: flex-start; padding-right: 0; padding-left: 60px; margin-bottom: 40px; }
     .timeline-item:nth-child(even) { padding-left: 60px; }
     .timeline-item::after, .timeline-item:nth-child(even)::after { left: 10px; right: auto; top: 20px; width: 16px; height: 16px; }
     .time, .timeline-item:nth-child(odd) .time, .timeline-item:nth-child(even) .time { position: relative; width: 100%; left: 0; right: 0; text-align: left; padding: 0 0 10px 0; font-size: 1.2rem; }
     .event-details, .timeline-item:nth-child(even) .event-details { text-align: left; margin: 0; padding: 20px; }
+}
+
+@media (max-width: 480px) {
+    .gallery-grid { grid-template-columns: 1fr; gap: 15px; }
+    .gallery-item.tall { grid-row: auto; }
 }
 
 /* Contact Modal Styles */
