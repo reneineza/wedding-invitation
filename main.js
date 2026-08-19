@@ -5,7 +5,7 @@ window.addEventListener('load', () => {
     setTimeout(() => {
         const loader = document.getElementById('loader');
         if (loader) loader.classList.add('fade-out');
-    }, 800);
+    }, 3500);
 });
 
 function showToast(message) {
@@ -48,6 +48,29 @@ document.addEventListener('DOMContentLoaded', () => {
                 navbar.classList.remove('nav-visible');
             }
         }
+    });
+
+    // 0.5 Mobile Drawer Menu
+    const hamburger = document.getElementById('hamburger-menu');
+    const drawer = document.getElementById('mobile-drawer');
+    const drawerOverlay = document.getElementById('drawer-overlay');
+    const closeDrawerBtn = document.getElementById('close-drawer');
+    const drawerLinks = document.querySelectorAll('.drawer-link');
+
+    const openDrawer = () => {
+        if(drawer) drawer.classList.add('open');
+        if(drawerOverlay) drawerOverlay.classList.add('open');
+    };
+    const closeDrawer = () => {
+        if(drawer) drawer.classList.remove('open');
+        if(drawerOverlay) drawerOverlay.classList.remove('open');
+    };
+
+    if (hamburger) hamburger.addEventListener('click', openDrawer);
+    if (closeDrawerBtn) closeDrawerBtn.addEventListener('click', closeDrawer);
+    if (drawerOverlay) drawerOverlay.addEventListener('click', closeDrawer);
+    drawerLinks.forEach(link => {
+        link.addEventListener('click', closeDrawer);
     });
 
     // 1. Intersection Observer for Scroll Animations

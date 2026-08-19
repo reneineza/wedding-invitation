@@ -15,8 +15,21 @@
     <!-- Loading Screen -->
     <div id="loader" class="loader-container">
         <div class="loader-content">
-            <div class="couple-names script-text gold-text">Gad <span class="ampersand">&amp;</span> Delphine</div>
-            <div class="loader-ring"></div>
+            <div class="couple-names script-text gold-text" style="margin-bottom: 20px;">Gad <span class="ampersand">&amp;</span> Delphine</div>
+            <svg class="loader-heart" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="gold-grad" x1="0%" y1="0%" x2="200%" y2="0%">
+                        <stop offset="0%" stop-color="#bf953f" />
+                        <stop offset="25%" stop-color="#fcf6ba" />
+                        <stop offset="50%" stop-color="#b38728" />
+                        <stop offset="75%" stop-color="#fdbf59" />
+                        <stop offset="100%" stop-color="#bf953f" />
+                        <animate attributeName="x1" values="0%;-100%" dur="2s" repeatCount="indefinite" />
+                        <animate attributeName="x2" values="200%;100%" dur="2s" repeatCount="indefinite" />
+                    </linearGradient>
+                </defs>
+                <path d="M50,90 C50,90 10,60 10,35 C10,15 35,15 50,35 C65,15 90,15 90,35 C90,60 50,90 50,90 Z" />
+            </svg>
         </div>
     </div>
 
@@ -35,8 +48,28 @@
                 <li><a href="#timeline">The Big Day</a></li>
                 <li><a href="#guestbook">Guestbook</a></li>
             </ul>
+            <div class="hamburger" id="hamburger-menu">
+                <i data-lucide="menu"></i>
+            </div>
         </div>
     </nav>
+
+    <!-- Mobile Drawer Menu -->
+    <div class="drawer-overlay" id="drawer-overlay"></div>
+    <div class="mobile-drawer" id="mobile-drawer">
+        <div class="drawer-header">
+            <a href="#hero" class="nav-logo gold-text drawer-logo">G&D</a>
+            <div class="close-btn" id="close-drawer">
+                <i data-lucide="x"></i>
+            </div>
+        </div>
+        <ul class="drawer-links">
+            <li><a href="#gallery" class="drawer-link">Memories</a></li>
+            <li><a href="#story" class="drawer-link">Our Story</a></li>
+            <li><a href="#timeline" class="drawer-link">The Big Day</a></li>
+            <li><a href="#guestbook" class="drawer-link">Guestbook</a></li>
+        </ul>
+    </div>
 
     <!-- Hero Section -->
     <header class="hero" id="hero">
@@ -77,7 +110,7 @@
                     </p>
                     <p class="invitation-subtext">are pleased to invite you to the wedding of their children:</p>
                     
-                    <h3 class="couple-names script-text gold-text" style="font-size: 4rem;">Izabayo Delphine <span class="ampersand" style="font-size: 3rem;">&amp;</span> Abijuru Gad</h3>
+                    <h3 class="couple-names script-text gold-text">Izabayo Delphine <span class="ampersand">&amp;</span> Abijuru Gad</h3>
                     
                     <div class="date-block">
                         <p class="save-date">It will be held on</p>
