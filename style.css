@@ -439,40 +439,11 @@ h1, h2, h3, h4, h5, h6, .subtitle, .quote-reference, .signature { font-family: v
     transition: width 0.1s ease;
 }
 
-/* Floating Ceremony Menu Trigger */
-.menu-trigger {
-    position: fixed;
-    top: 30px;
-    right: 30px;
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-    cursor: pointer;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-    transition: transform 0.3s ease, background 0.3s ease;
-    border: 1px solid rgba(191, 149, 63, 0.3);
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(10px);
-}
-.menu-trigger:hover {
-    transform: scale(1.05);
-    background: white;
-}
-.menu-text {
-    font-size: 1.8rem;
-}
-@media (max-width: 768px) {
-    .menu-trigger { top: 20px; right: 20px; width: 60px; height: 60px; }
-    .menu-text { font-size: 1.5rem; }
-}
+
 /* Toast Notifications */
 .toast-container {
     position: fixed;
-    bottom: 30px;
+    bottom: 100px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 10000;
@@ -505,51 +476,45 @@ h1, h2, h3, h4, h5, h6, .subtitle, .quote-reference, .signature { font-family: v
     to { opacity: 0; transform: translateY(50px); }
 }
 
-/* Full-Screen Ceremony Overlay */
-.ceremony-menu-overlay {
+/* Floating Glass Pill Navigation */
+.floating-pill-nav {
     position: fixed;
-    top: 0; left: 0; width: 100vw; height: 100vh;
-    background: rgba(255, 255, 255, 0.96);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    z-index: 10001;
+    bottom: 30px;
+    left: 0;
+    width: 100%;
     display: flex;
-    align-items: center;
     justify-content: center;
-    opacity: 0; visibility: hidden;
-    transition: opacity 0.5s ease;
+    z-index: 1000;
+    pointer-events: none;
 }
-.ceremony-menu-overlay.open {
-    opacity: 1; visibility: visible;
-}
-.menu-close-btn {
-    position: absolute;
-    top: 40px; right: 40px;
-    cursor: pointer;
-    color: var(--secondary-color);
-    transition: transform 0.3s ease;
-}
-.menu-close-btn:hover {
-    transform: rotate(90deg) scale(1.1);
-}
-.menu-content {
+.pill-container {
+    pointer-events: auto;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(191, 149, 63, 0.3);
+    border-radius: 50px;
+    padding: 12px 30px;
     display: flex;
-    flex-direction: column;
+    gap: 30px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
     align-items: center;
-    gap: 40px;
 }
-.menu-link {
-    font-size: 4rem;
+.pill-link {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
     text-decoration: none;
-    position: relative;
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition: color 0.3s ease;
 }
-.menu-link:hover {
-    opacity: 0.7;
-    transform: scale(1.05);
+.pill-link:hover {
+    color: var(--secondary-color);
 }
 @media (max-width: 768px) {
-    .menu-close-btn { top: 25px; right: 25px; }
-    .menu-link { font-size: 3rem; }
-    .menu-content { gap: 30px; }
+    .floating-pill-nav { bottom: 20px; }
+    .pill-container { padding: 12px 18px; gap: 15px; border-radius: 40px; }
+    .pill-link { font-size: 0.75rem; letter-spacing: 1px; }
 }

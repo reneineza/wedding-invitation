@@ -44,25 +44,6 @@ document.addEventListener('DOMContentLoaded', () => {
         // but it's fixed so we don't need scroll logic for it right now.
     });
 
-    // 0.5 Ceremony Overlay Menu
-    const menuTrigger = document.getElementById('menu-trigger');
-    const ceremonyMenu = document.getElementById('ceremony-menu');
-    const closeCeremonyMenuBtn = document.getElementById('close-ceremony-menu');
-    const menuLinks = document.querySelectorAll('.menu-link');
-
-    const openMenu = () => {
-        if(ceremonyMenu) ceremonyMenu.classList.add('open');
-    };
-    const closeMenu = () => {
-        if(ceremonyMenu) ceremonyMenu.classList.remove('open');
-    };
-
-    if (menuTrigger) menuTrigger.addEventListener('click', openMenu);
-    if (closeCeremonyMenuBtn) closeCeremonyMenuBtn.addEventListener('click', closeMenu);
-    menuLinks.forEach(link => {
-        link.addEventListener('click', closeMenu);
-    });
-
     // 1. Intersection Observer for Scroll Animations
     const observerOptions = {
         root: null,
