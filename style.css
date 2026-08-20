@@ -198,9 +198,6 @@ h1, h2, h3, h4, h5, h6, .subtitle, .quote-reference, .signature { font-family: v
     .story-split {
         flex-direction: column;
     }
-    .story-image-frame {
-        transform: translate(20px, 20px);
-    }
     .story-text-container {
         padding: 30px !important;
     }
