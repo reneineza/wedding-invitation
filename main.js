@@ -1,5 +1,15 @@
 // main.js
 
+// Force scroll to top on page refresh
+if (history.scrollRestoration) {
+    history.scrollRestoration = 'manual';
+}
+window.scrollTo(0, 0);
+if (window.location.hash) {
+    window.history.replaceState('', document.title, window.location.pathname + window.location.search);
+}
+window.addEventListener('beforeunload', () => window.scrollTo(0, 0));
+
 // UI Enhancements: Loader & Toast
 window.addEventListener('load', () => {
     setTimeout(() => {
